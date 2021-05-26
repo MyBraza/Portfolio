@@ -2,10 +2,11 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "webpack.config.js",
   "scripts": {
     "start": "webpack serve --mode development --open --hot",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "plop"
   },
   "repository": "git+https://github.com/MyBraza/portfolio.git",
   "author": "Ismail Ajiev <iadjiev@gmail.com>",
@@ -39,6 +40,7 @@
     "eslint-plugin-react": "7.22.0",
     "eslint-plugin-react-hooks": "4.2.0",
     "html-webpack-plugin": "5.3.1",
+    "plop": "^2.7.4",
     "postcss": "8.3.0",
     "postcss-loader": "5.3.0",
     "precss": "4.0.0",
