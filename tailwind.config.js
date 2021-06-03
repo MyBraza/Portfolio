@@ -1,13 +1,16 @@
 module.exports = {
   purge: ['./src/**/*.html', './src/**/*.js'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class',
   theme: {
+    fontFamily: {
+      sans: ['Monument', 'sans-serif'],
+      serif: ['serif'],
+      display: ['Monument', 'serif'],
+      body: ['Monument', 'sans-serif']
+    },
     colors: {
-      black: '#191516',
-      green: '#8cffdaff',
+      black: '#050010',
       white: '#ffffe8ff',
-      primary: '#1f1300ff',
-      secondary: '#744fc6ff',
       transparent: 'transparent',
       danger: '#d54356'
     }

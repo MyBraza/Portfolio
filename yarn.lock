@@ -1066,6 +1066,11 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
+classnames@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
+  integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
+
 clean-css@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-4.2.3.tgz#507b5de7d97b48ee53d84adb0160ff6216380f78"
@@ -1696,7 +1701,7 @@ end-of-stream@^1.1.0:
   dependencies:
     once "^1.4.0"
 
-enhanced-resolve@^5.0.0, enhanced-resolve@^5.8.0:
+enhanced-resolve@^5.0.0, enhanced-resolve@^5.7.0, enhanced-resolve@^5.8.0:
   version "5.8.2"
   resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-5.8.2.tgz#15ddc779345cbb73e97c611cd00c01c1e7bf4d8b"
   integrity sha512-F27oB3WuHDzvR2DOGNTaYy0D5o0cnrv8TeI482VM4kYgQd/FT9lUQwuNsJ0oOHtBUq7eiW5ytqzp7nBFknL+GA==
@@ -2230,6 +2235,14 @@ file-entry-cache@^6.0.0:
   integrity sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==
   dependencies:
     flat-cache "^3.0.4"
+
+file-loader@6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-6.2.0.tgz#baef7cf8e1840df325e4390b4484879480eebe4d"
+  integrity sha512-qo3glqyTa61Ytg4u73GultjHGjdRyig3tG6lPtyX/jOEJvHif9uB0/OCI2Kif6ctF3caQTW2G5gym21oAsI4pw==
+  dependencies:
+    loader-utils "^2.0.0"
+    schema-utils "^3.0.0"
 
 file-uri-to-path@1.0.0:
   version "1.0.0"
@@ -4389,7 +4402,7 @@ pkg-dir@^4.2.0:
   dependencies:
     find-up "^4.0.0"
 
-plop@^2.7.4:
+plop@2.7.4:
   version "2.7.4"
   resolved "https://registry.yarnpkg.com/plop/-/plop-2.7.4.tgz#835280aef3541102063b758f5116cce899e1c72b"
   integrity sha512-SaqN3mwug/Ur2RE/ryo05oLTLy+8qZGwosNt9JnrFWca+dLCsPJR1j2ZXwjrccmNu6LA7eB56lRyk/G0fKf9HA==
@@ -6067,6 +6080,15 @@ ts-loader@9.2.2:
     enhanced-resolve "^5.0.0"
     micromatch "^4.0.0"
     semver "^7.3.4"
+
+tsconfig-paths-webpack-plugin@^3.5.1:
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/tsconfig-paths-webpack-plugin/-/tsconfig-paths-webpack-plugin-3.5.1.tgz#e4dbf492a20dca9caab60086ddacb703afc2b726"
+  integrity sha512-n5CMlUUj+N5pjBhBACLq4jdr9cPTitySCjIosoQm0zwK99gmrcTGAfY9CwxRFT9+9OleNWXPRUcxsKP4AYExxQ==
+  dependencies:
+    chalk "^4.1.0"
+    enhanced-resolve "^5.7.0"
+    tsconfig-paths "^3.9.0"
 
 tsconfig-paths@^3.9.0:
   version "3.9.0"
