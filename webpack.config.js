@@ -25,6 +25,10 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'postcss-loader']
       },
       {
+        test: /\.svg$/i,
+        use: ['@svgr/webpack']
+      },
+      {
         test: /.otf$/,
         loader: 'file-loader',
         options: {
