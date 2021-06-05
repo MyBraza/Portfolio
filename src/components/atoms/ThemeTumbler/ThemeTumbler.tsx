@@ -28,10 +28,10 @@ const ThemeTumbler: FC<TThemeTumblerProps> = memo(() => {
   useEffect(() => {
     if (isDarkTheme) {
       document.documentElement.classList.add(DARK_THEME_CLASS)
-      window.localStorage.dark = 'false'
+      window.localStorage.dark = 'true'
     } else {
       document.documentElement.classList.remove(DARK_THEME_CLASS)
-      window.localStorage.dark = 'true'
+      window.localStorage.dark = 'false'
     }
   }, [isDarkTheme, dark])
 
