@@ -10,6 +10,20 @@
     @apply text-black;
   }
 
+  .outlined-svg > path {
+    fill: none;
+    stroke: #050010;
+    stroke-width: 1.2rem;
+    stroke-linejoin: round;
+  }
+
+  HTML.dark .outlined-svg > path {
+    fill: none;
+    stroke: #ffeef8;
+    stroke-width: 1.2rem;
+    stroke-linejoin: round;
+  }
+
   @font-face {
     font-family: Monument;
     font-weight: bold;

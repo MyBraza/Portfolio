@@ -1,5 +1,5 @@
 import React, { FC, memo, useEffect, useState } from 'react'
-import { SunIcon } from '@images'
+import { IconSun } from '@images'
 import { useDispatch, useSelector } from 'react-redux'
 import { getDarkThemeSelector } from '@store/selectors'
 import { toggleDarkTheme } from '@store/actions'
@@ -44,7 +44,7 @@ const ThemeTumbler: FC<TThemeTumblerProps> = memo(
           className="flex justify-center items-center w-8 h-8 p-1 rounded-full bg-black cursor-pointer duration-200 dark:bg-white"
           onClick={toggleTheme}
         >
-          <SunIcon className="fill-current text-white dark:hidden" />
+          <IconSun className="fill-current text-white dark:hidden" />
         </div>
       </div>
     )
