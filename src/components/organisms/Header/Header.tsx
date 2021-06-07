@@ -8,8 +8,8 @@ const Header: FC<THeaderProps> = memo(() => (
   <header className="flex flex-grow justify-end items-end max-h-20 px-10">
     <Navigation>
       <NavigationLink path="">Hello world!</NavigationLink>
-      <NavigationLink className='mr-4' path="">Hello world!!</NavigationLink>
-      <ThemeTumbler />
+      <NavigationLink path="">Hello world!!</NavigationLink>
+      <ThemeTumbler className='ml-4'/>
     </Navigation>
   </header>
 ))

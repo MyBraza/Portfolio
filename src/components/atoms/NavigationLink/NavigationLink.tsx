@@ -10,7 +10,7 @@ type TNavigationLinkProps = {
 
 const NavigationLink: FC<TNavigationLinkProps> = memo(
   ({ children, path, className }: TNavigationLinkProps) => {
-    const defaultClassName = 'text-lg'
+    const defaultClassName = 'text-lg mr-4'
     return (
       <Link className={classNames(defaultClassName, className)} to={path}>
         {children}
