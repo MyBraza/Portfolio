@@ -3,16 +3,18 @@ module.exports = {
   darkMode: 'class',
   theme: {
     fontFamily: {
-      sans: ['Monument', 'sans-serif'],
+      sans: ['Jura', 'sans-serif'],
       serif: ['serif'],
-      display: ['Monument', 'serif'],
-      body: ['Monument', 'sans-serif']
+      display: ['Jura', 'serif'],
+      body: ['Jura', 'sans-serif'],
+      mono: ['RubikMono']
     },
     colors: {
       black: '#050010',
       white: '#ffeef8',
       transparent: 'transparent',
-      danger: '#d54356'
+      danger: '#d54356',
+      dim: 'rgba(255, 238, 248, 0.7)'
     }
   },
   variants: {

@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-
   :root {
     font-size: 16px;
 
@@ -25,13 +24,12 @@
   }
 
   @font-face {
-    font-family: Monument;
-    font-weight: bold;
-    src: url(../assets/fonts/MonumentExtended-Ultrabold.otf) format("otf");
+    font-family: RubikMono;
+    font-weight: 400;
+    src: url(../assets/fonts/RubikMonoOne-Regular.ttf) format('truetype-variations');
   }
   @font-face {
-    font-family: Monument;
-    font-weight: normal;
-    src: url(../assets/fonts/MonumentExtended-Regular.otf) format("otf");
+    font-family: Jura;
+    src: url(../assets/fonts/Jura-VariableFont_wght.ttf) format('truetype-variations');
   }
 }

@@ -29,7 +29,7 @@ module.exports = {
         use: ['@svgr/webpack']
       },
       {
-        test: /.otf$/,
+        test: /\.ttf$/,
         loader: 'file-loader',
         options: {
           outputPath: 'assets/fonts',
