@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-size: 16px;
+
+    @apply text-black;
+  }
+
+  .outlined-svg > path {
+    fill: none;
+    stroke: #050010;
+    stroke-width: 1.2rem;
+    stroke-linejoin: round;
+  }
+
+  HTML.dark .outlined-svg > path {
+    fill: none;
+    stroke: #ffeef8;
+    stroke-width: 1.2rem;
+    stroke-linejoin: round;
+  }
+
+  @font-face {
+    font-family: RubikMono;
+    font-weight: 400;
+    src: url(../assets/fonts/RubikMonoOne-Regular.ttf) format('truetype-variations');
+  }
+  @font-face {
+    font-family: Jura;
+    src: url(../assets/fonts/Jura-VariableFont_wght.ttf) format('truetype-variations');
+  }
+}

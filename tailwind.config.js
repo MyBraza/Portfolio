@@ -1,15 +1,20 @@
 module.exports = {
   purge: ['./src/**/*.html', './src/**/*.js'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class',
   theme: {
+    fontFamily: {
+      sans: ['Jura', 'sans-serif'],
+      serif: ['serif'],
+      display: ['Jura', 'serif'],
+      body: ['Jura', 'sans-serif'],
+      mono: ['RubikMono']
+    },
     colors: {
-      black: '#191516',
-      green: '#8cffdaff',
-      white: '#ffffe8ff',
-      primary: '#1f1300ff',
-      secondary: '#744fc6ff',
+      black: '#050010',
+      white: '#ffeef8',
       transparent: 'transparent',
-      danger: '#d54356'
+      danger: '#d54356',
+      dim: 'rgba(255, 238, 248, 0.7)'
     }
   },
   variants: {
