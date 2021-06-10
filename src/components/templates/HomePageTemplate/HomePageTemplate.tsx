@@ -1,7 +1,8 @@
 import { Heading, Heading2, PlainText } from '@components/atoms'
-import { IconFileCodeSolid } from '@images'
+import { IconFileCodeSolid, PotatozationOfMarsScreenshot } from '@images'
 import React, { FC, memo } from 'react'
 import { ItemWithIcon } from '@components/organisms'
+import { ProjectItem } from '@components/molecules'
 
 type THomePageTemplateProps = {}
 
@@ -25,8 +26,8 @@ const HomePageTemplate: FC<THomePageTemplateProps> = memo(() => (
         </Heading2>
       </ItemWithIcon>
     </div>
-    <div className="flex flex-grow justify-center mb-8">
-      <PlainText className="w-1/2">
+    <div className="flex flex-grow justify-center mb-96 px-32">
+      <PlainText className="max-w-screen-lg">
         I love to learn and improve my skills. Despite the fact that I have
         little real work experience, I have been doing programming for three
         years already. Passed the course on Yandex.Praktikum "Middle Frontend
@@ -35,20 +36,19 @@ const HomePageTemplate: FC<THomePageTemplateProps> = memo(() => (
         project deployment.
       </PlainText>
     </div>
-    <div className="flex flex-grow justify-center mb-8">
-      <PlainText className="w-1/2">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aut
-        dignissimos eos laborum minus mollitia nostrum quisquam rem similique
-        veniam. Ad adipisci aliquam architecto aut beatae consequatur delectus
-        dicta dignissimos dolor dolore doloremque ducimus facere hic id ipsum
-        iure iusto laboriosam laborum maxime minus molestiae molestias neque
-        nisi officiis pariatur perferendis provident quam quas reprehenderit sed
-        tempore, tenetur vero voluptates! Ad asperiores nostrum perspiciatis
-        quidem rerum tempore ullam voluptatibus? Dolor dolorem eius eveniet
-        expedita fugit impedit perspiciatis, quisquam. Atque eligendi excepturi
-        itaque neque officia quam qui quos? Aut, autem culpa dignissimos
-        doloremque est iste nostrum possimus quidem quis repellat soluta?
-      </PlainText>
+    <div className="flex flex-grow justify-end pr-16 mb-32">
+      <Heading>Standalone projects</Heading>
+    </div>
+    <div className="flex flex-grow justify-center mb-32">
+      <ProjectItem
+        name="Potatozation of Mars"
+        image={PotatozationOfMarsScreenshot}
+        className="max-w-screen-lg mx32"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
+        delectus error est molestias perspiciatis placeat quam, sunt velit.
+        Debitis, tenetur?
+      </ProjectItem>
     </div>
   </main>
 ))
