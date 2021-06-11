@@ -8,7 +8,7 @@ const Header: FC<THeaderProps> = memo(() => (
   <>
     <header className="fixed flex justify-end items-end min-w-full h-24 px-10 pb-4 bg-gradient-to-b from-white dark:from-black">
       <Navigation>
-        <NavigationLink path="">Hello world!</NavigationLink>
+        <NavigationLink path="#projects">Hello world!</NavigationLink>
         <NavigationLink path="">Hello world!!</NavigationLink>
         <ThemeTumbler className="ml-4" />
       </Navigation>

@@ -7,7 +7,7 @@ const PlainText: FC<TPlainTextProps> = memo(
   ({ children, className }: TPlainTextProps) => {
     const defaultClassName = 'text-lg font-bold dark:text-dim'
     return (
-      <div className={classNames(defaultClassName, className)}>{children}</div>
+      <p className={classNames(defaultClassName, className)}>{children}</p>
     )
   }
 )
