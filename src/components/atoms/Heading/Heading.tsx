@@ -5,7 +5,7 @@ type THeadingProps = { children: ReactNode; className?: string }
 
 const Heading: FC<THeadingProps> = memo(
   ({ children, className }: THeadingProps) => {
-    const defaultClassName = 'text-9xl font-mono'
+    const defaultClassName = 'max-w-min text-9xl font-mono'
     return (
       <h1 className={classNames(defaultClassName, className)}>{children}</h1>
     )

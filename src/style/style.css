@@ -9,27 +9,65 @@
     @apply text-black;
   }
 
+  h1, h2, p {
+    cursor: default;
+  }
+
   .outlined-svg > path {
     fill: none;
-    stroke: #050010;
     stroke-width: 1.2rem;
     stroke-linejoin: round;
   }
 
-  HTML.dark .outlined-svg > path {
-    fill: none;
-    stroke: #ffeef8;
-    stroke-width: 1.2rem;
-    stroke-linejoin: round;
+  .animated-underline,
+  .animated-side-border-right,
+  .animated-side-border-left {
+    width: 0;
+    height: 0;
+    transition-property: width, height, border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+    box-sizing: border-box;
+  }
+
+  .animated-underline {
+    border-bottom: transparent 2px solid;
+  }
+
+  .animated-side-border-right {
+    border-right: transparent 2px solid;
+  }
+
+  .animated-side-border-left {
+    border-left: transparent 2px solid;
+  }
+
+  .has-animated-element:hover .animated-underline {
+    transition-property: width;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+    width: 100%;
+    border-color: currentColor;
+  }
+
+  .has-animated-element:hover .animated-side-border-right,
+  .has-animated-element:hover .animated-side-border-left {
+    transition-property: height;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+    height: 100%;
+    border-color: currentColor;
   }
 
   @font-face {
     font-family: RubikMono;
     font-weight: 400;
-    src: url(../assets/fonts/RubikMonoOne-Regular.ttf) format('truetype-variations');
+    src: url(../assets/fonts/RubikMonoOne-Regular.ttf)
+      format('truetype-variations');
   }
   @font-face {
     font-family: Jura;
-    src: url(../assets/fonts/Jura-VariableFont_wght.ttf) format('truetype-variations');
+    src: url(../assets/fonts/Jura-VariableFont_wght.ttf)
+      format('truetype-variations');
   }
 }

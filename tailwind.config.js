@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   purge: ['./src/**/*.html', './src/**/*.js'],
   darkMode: 'class',
@@ -10,8 +12,8 @@ module.exports = {
       mono: ['RubikMono']
     },
     colors: {
-      black: '#050010',
-      white: '#ffeef8',
+      black: colors.black,
+      white: colors.white,
       transparent: 'transparent',
       danger: '#d54356',
       dim: 'rgba(255, 238, 248, 0.7)'

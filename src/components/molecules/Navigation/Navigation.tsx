@@ -6,7 +6,7 @@ type TNavigationProps = {
 
 const Navigation: FC<TNavigationProps> = memo(
   ({ children }: TNavigationProps) => (
-    <nav className="flex items-baseline justify-end gap-x-8">{children}</nav>
+    <nav className="flex items-center justify-end gap-x-8">{children}</nav>
   )
 )
 

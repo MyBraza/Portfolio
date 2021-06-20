@@ -26,7 +26,7 @@ const ItemWithIcon: FC<TItemWithIconProps> = memo(
     return (
       <div className={classNames(defaultClassName, className)}>
         <IconElement
-          className={`h-${iconSize} ${outlinedSVG && 'outlined-svg'}`}
+          className={`h-${iconSize} ${outlinedSVG && 'outlined-svg stroke-current'}`}
         />
         {children}
       </div>
