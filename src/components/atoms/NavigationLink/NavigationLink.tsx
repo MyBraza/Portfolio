@@ -10,11 +10,14 @@ type TNavigationLinkProps = {
 
 const NavigationLink: FC<TNavigationLinkProps> = memo(
   ({ children, path, className }: TNavigationLinkProps) => {
-    const defaultClassName = 'text-lg font-mono'
+    const defaultClassName = 'text-lg font-mono max-w-max'
     return (
-      <Link className={classNames(defaultClassName, className)} to={path}>
-        {children}
-      </Link>
+      <div className="has-animated-element cursor-pointer">
+        <Link className={classNames(defaultClassName, className)} to={path}>
+          {children}
+          <div className="animated-underline" />
+        </Link>
+      </div>
     )
   }
 )
