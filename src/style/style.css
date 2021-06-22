@@ -9,6 +9,20 @@
     @apply text-black;
   }
 
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: white;
+  }
+
+  html.dark ::-webkit-scrollbar {
+    background-color: black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 9999px;
+  }
+
   h1,
   h2,
   p {
