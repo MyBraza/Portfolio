@@ -7,7 +7,7 @@ const Heading2: FC<THeading2Props> = memo(
   ({ children, className }: THeading2Props) => {
     const defaultClassName = 'text-xl leading-6 font-mono'
     return (
-      <div className={classNames(defaultClassName, className)}>{children}</div>
+      <h2 className={classNames(defaultClassName, className)}>{children}</h2>
     )
   }
 )

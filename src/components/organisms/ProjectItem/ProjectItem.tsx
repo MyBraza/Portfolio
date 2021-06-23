@@ -35,6 +35,7 @@ const ProjectItem: FC<TProjectItemProps> = memo(
           <img
             src={image}
             alt={name}
+            onClick={routeChange}
             className="mb-4 mr-4 object-cover	h-full"
           />
         </WithHoverAnimation>

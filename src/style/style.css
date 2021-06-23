@@ -9,7 +9,23 @@
     @apply text-black;
   }
 
-  h1, h2, p {
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: white;
+  }
+
+  html.dark ::-webkit-scrollbar {
+    background-color: black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 9999px;
+  }
+
+  h1,
+  h2,
+  p {
     cursor: default;
   }
 
@@ -42,7 +58,8 @@
     border-left: transparent 2px solid;
   }
 
-  .has-animated-element:hover .animated-underline {
+  .has-animated-element:hover .animated-underline,
+  .has-animated-element.active .animated-underline {
     transition-property: width;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 500ms;
@@ -51,7 +68,9 @@
   }
 
   .has-animated-element:hover .animated-side-border-right,
-  .has-animated-element:hover .animated-side-border-left {
+  .has-animated-element.active .animated-side-border-right,
+  .has-animated-element:hover .animated-side-border-left,
+  .has-animated-element.active .animated-side-border-left {
     transition-property: height;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 500ms;
