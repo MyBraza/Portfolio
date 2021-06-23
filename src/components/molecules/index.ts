@@ -1,3 +1,3 @@
 export * from './Navigation'
-export * from './ProjectItem'
+export * from '../organisms/ProjectItem'
 export * from './AnimatedHeading'
