@@ -13,7 +13,7 @@ type THomePageTemplateProps = {}
 
 const HomePageTemplate: FC<THomePageTemplateProps> = memo(() => (
   <main className="flex flex-col">
-    <div className="flex flex-col gap-y-2 max-w-min mb-32">
+    <div id="top" className="flex flex-col gap-y-2 max-w-min mb-32">
       <Heading className="ml-16 whitespace-nowrap">
         Hello.
         <br />I am Ismail

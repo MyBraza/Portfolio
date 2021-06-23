@@ -20,7 +20,7 @@ const NavigationLink: FC<TNavigationLinkProps> = memo(
         activeClass="active"
         className={classNames(defaultClassName, className)}
         to={path}
-        offset={-50}
+        offset={-100}
         spy
         smooth
       >
