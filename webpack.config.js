@@ -2,8 +2,14 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
+const { NODE_ENV } = process.env
+
+const IS_DEV = NODE_ENV !== 'production'
+
 module.exports = {
-  entry: './src/index.tsx',
+  mode: IS_DEV ? 'development' : 'production',
+  devtool: IS_DEV ? 'eval' : false,
+  entry: [path.join(__dirname, '/src/index.tsx')],
   output: {
     path: path.join(__dirname, '/dist'),
     filename: 'bundle.js'
@@ -22,7 +28,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader'],
+        use: ['style-loader', 'css-loader', 'postcss-loader']
       },
       {
         test: /\.(png|jpe?g|gif)$/i,

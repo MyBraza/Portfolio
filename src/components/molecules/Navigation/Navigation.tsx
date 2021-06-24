@@ -1,13 +1,11 @@
-import React, { FC, memo, ReactNode } from 'react'
+import React, { FC, ReactNode } from 'react'
 
 type TNavigationProps = {
   children: ReactNode
 }
 
-const Navigation: FC<TNavigationProps> = memo(
-  ({ children }: TNavigationProps) => (
-    <nav className="flex items-center justify-end gap-x-8">{children}</nav>
-  )
+const Navigation: FC<TNavigationProps> = ({ children }: TNavigationProps) => (
+  <nav className="flex items-center justify-end gap-x-8">{children}</nav>
 )
 
 Navigation.displayName = 'Navigation'

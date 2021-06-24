@@ -1,4 +1,4 @@
-import React, { FC, memo, ReactNode } from 'react'
+import React, { FC, ReactNode } from 'react'
 import classNames from 'classnames'
 
 interface IconProps {
@@ -13,26 +13,26 @@ type TItemWithIconProps = {
   outlinedSVG?: boolean
 }
 
-const ItemWithIcon: FC<TItemWithIconProps> = memo(
-  ({
-    children,
-    className,
-    icon,
-    outlinedSVG = false,
-    iconSize = 8
-  }: TItemWithIconProps) => {
-    const IconElement = icon
-    const defaultClassName = 'flex items-center gap-x-12'
-    return (
-      <div className={classNames(defaultClassName, className)}>
-        <IconElement
-          className={`h-${iconSize} ${outlinedSVG && 'outlined-svg stroke-current'}`}
-        />
-        {children}
-      </div>
-    )
-  }
-)
+const ItemWithIcon: FC<TItemWithIconProps> = ({
+  children,
+  className,
+  icon,
+  outlinedSVG = false,
+  iconSize = 8
+}: TItemWithIconProps) => {
+  const IconElement = icon
+  const defaultClassName = 'flex items-center gap-x-12'
+  return (
+    <div className={classNames(defaultClassName, className)}>
+      <IconElement
+        className={`h-${iconSize} ${
+          outlinedSVG && 'outlined-svg stroke-current'
+        }`}
+      />
+      {children}
+    </div>
+  )
+}
 
 ItemWithIcon.displayName = 'ItemWithIcon'
 

@@ -1,11 +1,11 @@
-import React, { FC, memo, ReactNode, useCallback } from 'react'
+import React, { FC, memo, useCallback } from 'react'
 import { PlainText } from '@components/atoms'
 import classNames from 'classnames'
 import { AnimatedHeading } from '@components/molecules'
 import { WithHoverAnimation } from '@components/organisms'
 
 type TProjectItemProps = {
-  children: ReactNode
+  description: string
   name: string
   image: string
   reverse?: boolean
@@ -14,7 +14,14 @@ type TProjectItemProps = {
 }
 
 const ProjectItem: FC<TProjectItemProps> = memo(
-  ({ name, image, className, reverse, path, children }: TProjectItemProps) => {
+  ({
+    name,
+    image,
+    className,
+    reverse,
+    path,
+    description
+  }: TProjectItemProps) => {
     const defaultClassName = 'flex flex-grow justify-center gap-x-8'
 
     const routeChange = useCallback(() => {
@@ -28,7 +35,7 @@ const ProjectItem: FC<TProjectItemProps> = memo(
             {name}
           </AnimatedHeading>
           <div className="flex justify-end">
-            <PlainText className="w-5/6">{children}</PlainText>
+            <PlainText className="w-5/6">{description}</PlainText>
           </div>
         </div>
         <WithHoverAnimation className="max-w-lg cursor-pointer ml-4">
