@@ -19,7 +19,7 @@ const ItemWithIcon: FC<TItemWithIconProps> = ({
   className,
   icon,
   outlinedSVG = false,
-  iconSize = 8
+  iconSize = 2
 }: TItemWithIconProps) => {
   const IconElement = icon
   const defaultClassName = 'flex items-center gap-x-12'

@@ -21,7 +21,7 @@ const HomePageTemplate: FC<THomePageTemplateProps> = memo(() => (
       <ItemWithIcon
         className="justify-end"
         icon={IconFileCodeSolid}
-        iconSize="16"
+        iconSize="4"
         outlinedSVG
       >
         <Heading2>
