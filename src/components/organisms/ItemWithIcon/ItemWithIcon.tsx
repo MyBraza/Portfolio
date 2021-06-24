@@ -2,6 +2,7 @@ import React, { FC, ReactNode } from 'react'
 import classNames from 'classnames'
 
 interface IconProps {
+  style: { [key: string]: string }
   className: string
 }
 
@@ -25,9 +26,8 @@ const ItemWithIcon: FC<TItemWithIconProps> = ({
   return (
     <div className={classNames(defaultClassName, className)}>
       <IconElement
-        className={`h-${iconSize} ${
-          outlinedSVG && 'outlined-svg stroke-current'
-        }`}
+        style={{ height: `${iconSize}rem` }}
+        className={`${outlinedSVG && 'outlined-svg stroke-current'}`}
       />
       {children}
     </div>
