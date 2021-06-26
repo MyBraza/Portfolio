@@ -9,7 +9,7 @@
     @apply text-black;
   }
 
-  ::-webkit-scrollbar {
+  html ::-webkit-scrollbar {
     width: 0.5rem;
     background-color: ivory;
   }
@@ -18,7 +18,7 @@
     background-color: #1b1b1b;
   }
 
-  ::-webkit-scrollbar-thumb {
+  html ::-webkit-scrollbar-thumb {
     background-color: gray;
     border-radius: 9999px;
   }
