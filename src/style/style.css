@@ -12,6 +12,7 @@
   html ::-webkit-scrollbar {
     width: 0.5rem;
     background-color: ivory;
+    transition-duration: 1s;
   }
 
   html.dark ::-webkit-scrollbar {
@@ -76,6 +77,36 @@
     transition-duration: 500ms;
     height: 100%;
     border-color: currentColor;
+  }
+
+  .tumbler-icon-dark {
+    transition-property: width, height, top, right;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+  }
+
+  html.dark .tumbler-icon-dark {
+    transition-delay: 200ms;
+    top: -0.25rem;
+    right: -0.25rem;
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .tumbler-icon-bright {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+    transition-delay: 200ms;
+  }
+
+  html.dark .tumbler-icon-bright {
+    margin: -1.6rem;
+    transition-delay: 0s;
   }
 
   @font-face {

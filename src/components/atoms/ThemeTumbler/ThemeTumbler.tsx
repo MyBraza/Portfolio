@@ -41,10 +41,11 @@ const ThemeTumbler: FC<TThemeTumblerProps> = memo(
     return (
       <div className={className}>
         <div
-          className="flex justify-center items-center w-8 h-8 p-1 rounded-full bg-black cursor-pointer duration-200 dark:bg-white"
+          className="relative flex justify-center items-center w-8 h-8 transition duration-500 ease-in-out overflow-hidden rounded-full bg-black cursor-pointer dark:bg-eerie"
           onClick={toggleTheme}
         >
-          <IconSun className="fill-current text-white dark:hidden" />
+          <IconSun className="tumbler-icon-bright m-1 fill-current text-white" />
+          <div className="tumbler-icon-dark absolute bg-eerie rounded-full" />
         </div>
       </div>
     )
