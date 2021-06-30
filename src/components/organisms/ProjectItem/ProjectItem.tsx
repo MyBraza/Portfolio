@@ -25,7 +25,7 @@ const ProjectItem: FC<TProjectItemProps> = memo(
     const defaultClassName = 'flex flex-grow justify-center gap-x-8'
 
     const routeChange = useCallback(() => {
-      if (path) window.location.href = path
+      if (path) window.open(path, '_blank')
     }, [])
 
     return (
