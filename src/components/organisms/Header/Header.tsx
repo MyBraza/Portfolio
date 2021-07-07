@@ -2,8 +2,7 @@ import React, { FC, memo, useEffect, useState } from 'react'
 import { Navigation } from '@components/molecules'
 import { NavigationLink, ThemeTumbler } from '@components/atoms'
 import { Dropdown, IDropdownOption } from '@components/organisms'
-import { useDispatch, useSelector } from 'react-redux'
-import { getLanguageSelector } from '@store/selectors'
+import { useDispatch } from 'react-redux'
 import { changeLanguage } from '@store/actions'
 import { TGisLanguage, TLanguage } from '@config'
 
@@ -16,7 +15,6 @@ const Header: FC<THeaderProps> = memo(() => {
   ]
 
   const dispatch = useDispatch()
-  const currentLanguage = useSelector(getLanguageSelector)
 
   if (!window.localStorage.language) {
     window.localStorage.language = 'en'
@@ -35,13 +33,14 @@ const Header: FC<THeaderProps> = memo(() => {
 
   useEffect(() => {
     window.localStorage.language = language
-  }, [language, currentLanguage])
+    dispatch(changeLanguage({ language: language }))
+  }, [language])
 
   return (
     <>
       <header className="fixed flex justify-end items-end min-w-full h-24 px-10 pb-6 bg-gradient-to-b from-ivory dark:from-eerie">
         <Navigation>
-          <NavigationLink path="top">Home</NavigationLink>
+          <NavigationLink path="about">Home</NavigationLink>
           <NavigationLink path="projects">Projects</NavigationLink>
           <Dropdown
             options={languages}

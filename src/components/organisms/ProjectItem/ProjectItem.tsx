@@ -3,9 +3,10 @@ import { Image, PlainText } from '@components/atoms'
 import classNames from 'classnames'
 import { AnimatedHeading } from '@components/molecules'
 import { withHoverAnimation } from '@hocs'
+import { TTextContent } from '@config'
 
 type TProjectItemProps = {
-  description: string
+  description: TTextContent
   name: string
   image: string
   reverse?: boolean
