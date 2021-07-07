@@ -27,8 +27,8 @@
 	  "@hocs": ["./src/HOCs/index.ts"],
 	  "@images": ["./src/assets/images/index.ts"],
 	  "@hooks": ["./src/hooks/index.ts"],
-	  "@types": ["./src/@types/index.ts"],
 	  "@database": ["./src/database/index.ts"],
+	  "@types/*": ["./src/@types/*"],
 	  "@store/*": ["./src/store/*"],
 	  "@utils/*": ["./src/utils/*"]
 	},

@@ -7,7 +7,7 @@ const Heading2: FC<THeading2Props> = ({
   children,
   className
 }: THeading2Props) => {
-  const defaultClassName = 'text-xl leading-6 font-mono'
+  const defaultClassName = 'text-xl leading-6 font-mono select-none'
   return <h2 className={classNames(defaultClassName, className)}>{children}</h2>
 }
 

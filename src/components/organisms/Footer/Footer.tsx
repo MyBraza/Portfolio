@@ -8,7 +8,7 @@ type TFooterProps = {}
 const Footer: FC<TFooterProps> = memo(() => {
   const routeChange = useCallback((path: string) => {
     return () => {
-      if (path) window.location.href = path
+      if (path) window.open(path, '_blank')
     }
   }, [])
 

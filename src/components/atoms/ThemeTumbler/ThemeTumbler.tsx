@@ -19,9 +19,9 @@ const ThemeTumbler: FC<TThemeTumblerProps> = memo(
       window.localStorage.dark = 'true'
     }
 
-    const [isDarkTheme, setIsDarkTheme] = useState<boolean>(() => {
-      return window.localStorage.dark === 'true'
-    })
+    const [isDarkTheme, setIsDarkTheme] = useState<boolean>(
+      window.localStorage.dark === 'true'
+    )
 
     const toggleTheme = () => {
       setIsDarkTheme((value) => !value)

@@ -15,10 +15,10 @@ const AnimatedHeading: FC<TAnimatedHeadingProps> = ({
   HeadingType = Heading2,
   children
 }: TAnimatedHeadingProps) => {
-  const defaultClassName = 'has-animated-element cursor-pointer'
+  const defaultClassName = 'max-w-max cursor-pointer'
   return (
-    <div className={classNames(defaultClassName, className)} onClick={onClick}>
-      <HeadingType className="max-w-max">
+    <div className="has-animated-element" onClick={onClick}>
+      <HeadingType className={classNames(defaultClassName, className)}>
         {children}
         <div className="animated-underline" />
       </HeadingType>
