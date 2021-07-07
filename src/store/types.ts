@@ -1,11 +1,17 @@
-import { TOGGLE_DARK_THEME } from '@store/actionTypes'
+import { TLanguage } from '@config'
+import { CHANGE_LANGUAGE, TOGGLE_DARK_THEME } from '@store/actionTypes'
 
 export interface IAppState {
   dark: boolean
+  language: TLanguage
 }
 
 export interface IToggleDarkThemePayload {
   dark: boolean
+}
+
+export interface IChangeLanguagePayload {
+  language: TLanguage
 }
 
 export type TToggleDarkTheme = {
@@ -13,4 +19,9 @@ export type TToggleDarkTheme = {
   payload: IToggleDarkThemePayload
 }
 
-export type TActions = TToggleDarkTheme
+export type TChangeLanguage = {
+  type: typeof CHANGE_LANGUAGE
+  payload: IChangeLanguagePayload
+}
+
+export type TActions = TToggleDarkTheme | TChangeLanguage

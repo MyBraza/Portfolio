@@ -1,8 +1,8 @@
 import React, { FC, memo, useCallback } from 'react'
-import { PlainText } from '@components/atoms'
+import { Image, PlainText } from '@components/atoms'
 import classNames from 'classnames'
 import { AnimatedHeading } from '@components/molecules'
-import { WithHoverAnimation } from '@components/organisms'
+import { withHoverAnimation } from '@hocs'
 
 type TProjectItemProps = {
   description: string
@@ -28,6 +28,8 @@ const ProjectItem: FC<TProjectItemProps> = memo(
       if (path) window.open(path, '_blank')
     }, [])
 
+    const ImageWithAnimation = withHoverAnimation(Image)
+
     return (
       <div className={classNames(defaultClassName, className)}>
         <div className={`${reverse && 'order-last'} max-w-md`}>
@@ -38,14 +40,12 @@ const ProjectItem: FC<TProjectItemProps> = memo(
             <PlainText className="w-5/6">{description}</PlainText>
           </div>
         </div>
-        <WithHoverAnimation className="max-w-lg cursor-pointer ml-4">
-          <img
-            src={image}
-            alt={name}
-            onClick={routeChange}
-            className="mb-4 mr-4 object-cover	h-full"
-          />
-        </WithHoverAnimation>
+        <ImageWithAnimation
+          src={image}
+          alt={name}
+          onClick={routeChange}
+          className="mb-4 mr-4 object-cover	h-full max-w-lg cursor-pointer"
+        />
       </div>
     )
   }

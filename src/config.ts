@@ -9,6 +9,12 @@ export const PATHS = {
   EMAIL: 'iadjiev@gmail.com'
 }
 
+export type TLanguage = 'en' | 'ru'
+
+export const TGisLanguage = (string: string): string is TLanguage => {
+  return string === 'en' || string === 'ru'
+}
+
 export const PROJECTS = {
   POTATOZATION_OF_MARS: {
     description:
