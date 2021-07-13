@@ -9,7 +9,7 @@ type TProjectItemProps = {
   description: TTextContent
   name: string
   image: string
-  reverse?: boolean
+  isReversed?: boolean
   path?: string
   className?: string
 }
@@ -19,7 +19,7 @@ const ProjectItem: FC<TProjectItemProps> = memo(
     name,
     image,
     className,
-    reverse,
+    isReversed,
     path,
     description
   }: TProjectItemProps) => {
@@ -33,7 +33,7 @@ const ProjectItem: FC<TProjectItemProps> = memo(
 
     return (
       <div className={classNames(defaultClassName, className)}>
-        <div className={`${reverse && 'order-last'} max-w-md`}>
+        <div className={`${isReversed && 'order-last'} max-w-md`}>
           <AnimatedHeading onClick={routeChange} className="mb-4 w-5/6">
             {name}
           </AnimatedHeading>

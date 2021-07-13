@@ -4,7 +4,7 @@ import { TTextContent } from '@config'
 import { useSelector } from 'react-redux'
 import { getLanguageSelector } from '@store/selectors'
 
-type TPlainTextProps = { children: TTextContent; className?: string }
+type TPlainTextProps = { children: TTextContent | string; className?: string }
 
 const PlainText: FC<TPlainTextProps> = ({
   children,
@@ -16,7 +16,7 @@ const PlainText: FC<TPlainTextProps> = ({
 
   return (
     <p className={classNames(defaultClassName, className)}>
-      {children[language]}
+      {typeof children === 'string' ? children : children[language]}
     </p>
   )
 }
