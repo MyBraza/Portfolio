@@ -38,23 +38,27 @@ const Header: FC<THeaderProps> = memo(() => {
 
   return (
     <>
-      <header className="fixed flex justify-end items-end min-w-full h-24 px-10 pb-6 bg-gradient-to-b from-ivory dark:from-eerie">
+      <header className="sm:fixed flex items-end min-w-full h-32 px-4 sm:px-10 pb-10 bg-gradient-to-b from-ivory dark:from-eerie">
         <Navigation>
-          <NavigationLink path="about">Home</NavigationLink>
-          <NavigationLink path="projects">Projects</NavigationLink>
-          <Dropdown
-            options={languages}
-            className="w-24 pb-2 text-right"
-            optionsClassName="flex flex-grow justify-end"
-            defaultOption={languages.find(
-              (option) => option.value === language
-            )}
-            onChange={changeCurrentLanguage}
-          />
-          <ThemeTumbler className="ml-4" />
+          <div className='flex gap-x-2 w-full sm:w-auto sm:gap-x-8'>
+            <NavigationLink path="about">Home</NavigationLink>
+            <NavigationLink path="projects">Projects</NavigationLink>
+          </div>
+          <div className='flex gap-x-2 w-full sm:w-auto sm:gap-x-8 justify-end'>
+            <Dropdown
+              options={languages}
+              className="w-24 pb-2 text-right"
+              optionsClassName="flex flex-grow justify-end bg-ivory dark:bg-eerie"
+              defaultOption={languages.find(
+                (option) => option.value === language
+              )}
+              onChange={changeCurrentLanguage}
+            />
+            <ThemeTumbler className="ml-4" />
+          </div>
         </Navigation>
       </header>
-      <div className="mb-24" />
+      <div className="sm:mb-24" />
     </>
   )
 })

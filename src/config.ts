@@ -21,7 +21,6 @@ export const ABOUTME = {
   info: {
     en:
       'I love to learn and improve my skills. ' +
-      'Despite the fact that I have little real work experience, ' +
       'I have been doing programming for three years already. ' +
       'Passed the course on Yandex.Praktikum "Middle Frontend Developer". ' +
       'In addition to deepening the existing skills, ' +
@@ -29,8 +28,7 @@ export const ABOUTME = {
       'setting up the environment and project deployment.',
     ru:
       'Люблю учиться и совершенствовать свои навыки. ' +
-      'Несмотря на то, что реального опыта работы мало, ' +
-      'занимаюсь программированием уже на протяжении трех лет. ' +
+      'Занимаюсь программированием уже на протяжении трех лет. ' +
       'Прошел курс Яндекс.Практикума "Мидл фронтэнд-разработчик". ' +
       'Помимо углубления имеющихся навыков, получил опыт работы с React, ' +
       'Redux, настройкой окружения и деплоя проекта.'

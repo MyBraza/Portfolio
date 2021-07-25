@@ -9,7 +9,7 @@ type TProjectItemProps = {
   description: TTextContent
   name: string
   image: string
-  reverse?: boolean
+  isReversed?: boolean
   path?: string
   className?: string
 }
@@ -19,11 +19,11 @@ const ProjectItem: FC<TProjectItemProps> = memo(
     name,
     image,
     className,
-    reverse,
+    isReversed,
     path,
     description
   }: TProjectItemProps) => {
-    const defaultClassName = 'flex flex-grow justify-center gap-x-8'
+    const defaultClassName = 'flex flex-col lg:flex-row flex-grow justify-center gap-8'
 
     const routeChange = useCallback(() => {
       if (path) window.open(path, '_blank')
@@ -33,7 +33,7 @@ const ProjectItem: FC<TProjectItemProps> = memo(
 
     return (
       <div className={classNames(defaultClassName, className)}>
-        <div className={`${reverse && 'order-last'} max-w-md`}>
+        <div className={`${isReversed && 'lg:order-last'} max-w-md px-4 md:px-0`}>
           <AnimatedHeading onClick={routeChange} className="mb-4 w-5/6">
             {name}
           </AnimatedHeading>
@@ -45,7 +45,7 @@ const ProjectItem: FC<TProjectItemProps> = memo(
           src={image}
           alt={name}
           onClick={routeChange}
-          className="mb-4 mr-4 object-cover	h-full max-w-lg cursor-pointer"
+          className="px-4 lg:px-0 mb-4 lg:mr-4 object-cover h-full sm:max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg cursor-pointer"
         />
       </div>
     )
