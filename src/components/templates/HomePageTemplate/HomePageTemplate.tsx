@@ -19,11 +19,11 @@ const HomePageTemplate: FC<THomePageTemplateProps> = memo(() => {
   return (
     <main className="flex flex-col">
       <div id="about" className="flex flex-col gap-y-2 max-w-min mb-32">
-        <Heading className="ml-16 whitespace-pre">
+        <Heading className="ml-4 lg:ml-16 whitespace-pre">
           {language === 'en' ? 'Hello.\nI am Ismail' : 'Привет\n  Я Исмаил'}
         </Heading>
         <ItemWithIcon
-          className="justify-end"
+          className="ml-4 lg:justify-end"
           icon={IconFileCodeSolid}
           iconSize="4"
           outlinedSVG
@@ -35,13 +35,13 @@ const HomePageTemplate: FC<THomePageTemplateProps> = memo(() => {
           </Heading2>
         </ItemWithIcon>
       </div>
-      <div className="flex flex-grow justify-center mb-96 px-32">
+      <div className="flex flex-grow justify-center mb-96 px-4 md:px-32">
         <PlainText className="max-w-screen-lg text-justify">
           {ABOUTME.info}
         </PlainText>
       </div>
       <div id="projects">
-        <div className="flex flex-grow justify-end pr-16 mb-32">
+        <div className="flex flex-grow justify-end pr-8 md:pr-16 mb-32">
           <Heading className='whitespace-pre'>
             {language === 'en'
               ? 'Standalone\nprojects'
@@ -53,7 +53,7 @@ const HomePageTemplate: FC<THomePageTemplateProps> = memo(() => {
             name="Potatozation of Mars"
             image={PotatozationOfMarsScreenshot}
             path={PATHS.POTATOZATION_OF_MARS}
-            className="max-w-screen-lg mx32 text-justify"
+            className="max-w-max text-justify"
             description={PROJECTS.POTATOZATION_OF_MARS.description}
           />
         </div>
@@ -63,7 +63,7 @@ const HomePageTemplate: FC<THomePageTemplateProps> = memo(() => {
             image={MessengerScreenshot}
             path={PATHS.MESSENGER}
             isReversed
-            className="max-w-screen-lg mx32 text-justify"
+            className="max-w-max text-justify"
             description={PROJECTS.MESSENGER.description}
           />
         </div>

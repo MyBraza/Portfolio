@@ -10,7 +10,7 @@ const PlainText: FC<TPlainTextProps> = ({
   children,
   className
 }: TPlainTextProps) => {
-  const defaultClassName = 'text-lg font-bold dark:text-dim'
+  const defaultClassName = 'text-base md:text-lg font-bold dark:text-dim'
 
   const language = useSelector(getLanguageSelector)
 

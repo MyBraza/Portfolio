@@ -17,7 +17,7 @@ const NavigationLink: FC<TNavigationLinkProps> = ({
   className
 }: TNavigationLinkProps) => {
   const defaultClassName =
-    'has-animated-element cursor-pointer text-lg font-mono max-w-max'
+    'has-animated-element cursor-pointer text-base md:text-lg font-mono max-w-max'
   const Link = redirect ? RedirectLink : ScrollLink
   return (
     <Link
