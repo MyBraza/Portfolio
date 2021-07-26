@@ -19,8 +19,8 @@ const Footer: FC<TFooterProps> = memo(() => {
   }, [])
 
   return (
-    <div className="flex flex-col lg:flex-row flex-grow justify-between items-center shadow-centered bg-white text-black dark:shadow-none py-10 lg:py-20 px-5 lg:px-40 m-4 gap-4">
-      <div className="flex gap-x-4 lg:gap-x-10">
+    <div className="flex flex-col lg:flex-row flex-grow justify-between items-center shadow-centered bg-white text-black dark:shadow-none py-10 lg:py-20 px-5 lg:px-36 xl:px-40 m-4 gap-4">
+      <div className="flex gap-x-4 lg:gap-x-8 xl:gap-x-10">
         <AnimatedHeading
           HeadingType={Heading3}
           onClick={routeChange(PATHS.HABR)}
@@ -40,7 +40,7 @@ const Footer: FC<TFooterProps> = memo(() => {
           Head Hunter
         </AnimatedHeading>
       </div>
-      <div className="flex flex-col lg:flex-row gap-4 lg:gap-x-6">
+      <div className="flex flex-col items-center lg:items-start lg:flex-row gap-4 lg:gap-x-6">
         <div className="text-base lg:text-xl leading-6 font-sans">+7(962)853-23-77</div>
         <AnimatedHeading HeadingType={Heading3} onClick={sendMail(PATHS.EMAIL)}>
           {PATHS.EMAIL}
