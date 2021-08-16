@@ -4,14 +4,16 @@ ismail-ajiev.com
 
 ## Starting locally
 
-Installing dependencies
+Install dependencies
 
 ```sh
 yarn install
 ```
 
-Starting webpack-dev-server
+Build the project and start webpack-dev-server in the watch mode
 
 ```sh
 yarn start
 ```
+
+If everything went well, you now have page running on http://localhost:8080
