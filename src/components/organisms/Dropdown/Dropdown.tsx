@@ -3,6 +3,13 @@ import { AnimatedHeading } from '@components/molecules'
 import { Heading3 } from '@components/atoms'
 import { CaretDown, CaretUp } from '@images'
 
+export type TDropdownOptionValue = string | number | boolean | null
+
+export interface IDropdownOption {
+  value: TDropdownOptionValue
+  label: string
+}
+
 type TDropdownProps = {
   className: string
   options: Array<IDropdownOption>
@@ -11,13 +18,6 @@ type TDropdownProps = {
   showOnSelect?: boolean
   defaultOption?: IDropdownOption
   onChange?: (value: IDropdownOption) => void
-}
-
-export type TDropdownOptionValue = string | number | boolean | null
-
-export interface IDropdownOption {
-  value: TDropdownOptionValue
-  label: string
 }
 
 const placeholder: IDropdownOption = { value: null, label: 'Select an option' }
@@ -55,20 +55,18 @@ const Dropdown: FC<TDropdownProps> = memo(
       }
     }
 
-    const optionItems = options.map((option, id) => {
-      return (
-        <div
-          key={id}
-          onClick={onSelect(option)}
-          data-value={option.value}
-          className={optionsClassName}
-        >
-          <AnimatedHeading className='mr-3' HeadingType={Heading3}>
-            {option.label}
-          </AnimatedHeading>
-        </div>
-      )
-    })
+    const optionItems = options.map((option, id) => (
+      <div
+        key={id}
+        onClick={onSelect(option)}
+        data-value={option.value}
+        className={optionsClassName}
+      >
+        <AnimatedHeading className="mr-3" HeadingType={Heading3}>
+          {option.label}
+        </AnimatedHeading>
+      </div>
+    ))
 
     return (
       <div
@@ -85,9 +83,7 @@ const Dropdown: FC<TDropdownProps> = memo(
           onClick={open === 'on-click' ? toggleDropdown : () => {}}
         >
           <Heading3 className={className}>{selectedOption.label}</Heading3>
-          {!active && (
-            <CaretDown className="ml-1 mb-1 w-2 fill-current" />
-          )}
+          {!active && <CaretDown className="ml-1 mb-1 w-2 fill-current" />}
           {active && <CaretUp className="ml-1 mb-1 w-2 fill-current" />}
         </div>
         <div className="relative">
