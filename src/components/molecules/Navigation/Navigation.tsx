@@ -5,7 +5,7 @@ type TNavigationProps = {
 }
 
 const Navigation: FC<TNavigationProps> = ({ children }: TNavigationProps) => (
-  <nav className="flex items-center justify-end gap-x-8">{children}</nav>
+  <nav className="flex flex-grow flex-col sm:flex-row sm:justify-end items-center gap-2 sm:gap-x-8">{children}</nav>
 )
 
 Navigation.displayName = 'Navigation'

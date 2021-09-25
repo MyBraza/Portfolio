@@ -7,7 +7,7 @@ const Heading3: FC<THeading3Props> = ({
   children,
   className
 }: THeading3Props) => {
-  const defaultClassName = 'text-xl leading-6 font-sans font-bold'
+  const defaultClassName = 'text-base md:text-xl leading-6 font-sans font-bold select-none'
   return <h3 className={classNames(defaultClassName, className)}>{children}</h3>
 }
 
