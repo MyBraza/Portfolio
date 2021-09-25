@@ -13,6 +13,7 @@ DragonBody.friction = 10
 DragonBody.bounciness = 0.5
 DragonBody.isFalling = true
 DragonBody.interactive = true
+DragonBody.buttonMode = true
 DragonBody.enableDraggingEvents()
 
 DragonBody.step = () => {
