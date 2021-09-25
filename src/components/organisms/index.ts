@@ -1,4 +1,5 @@
 export * from './Header'
 export * from './ItemWithIcon'
 export * from './Footer'
+export * from './PixiCanvas'
 export * from './Dropdown'

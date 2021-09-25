@@ -8,7 +8,10 @@ const IS_DEV = NODE_ENV !== 'production'
 
 module.exports = {
   mode: IS_DEV ? 'development' : 'production',
-  devtool: IS_DEV ? 'eval' : false,
+  devtool: IS_DEV ? 'eval-cheap-source-map' : false,
+  devServer: {
+    historyApiFallback: true
+  },
   entry: [path.join(__dirname, '/src/index.tsx')],
   output: {
     path: path.join(__dirname, '/dist'),

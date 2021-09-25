@@ -1,6 +1,6 @@
 import React from 'react'
 import './style/style.css'
-import { HomePage } from '@pages'
+import { HomePage, DragonNeckPage } from '@pages'
 import { Route, BrowserRouter, Switch } from 'react-router-dom'
 
 const App: React.FC = () => (
@@ -9,6 +9,9 @@ const App: React.FC = () => (
       <Switch>
         <Route path="/" exact>
           <HomePage />
+        </Route>
+        <Route path="/dragon-neck">
+          <DragonNeckPage />
         </Route>
       </Switch>
     </BrowserRouter>
