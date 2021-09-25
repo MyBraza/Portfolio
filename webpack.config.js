@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
 const { NODE_ENV } = process.env
@@ -55,5 +56,10 @@ module.exports = {
       }
     ]
   },
-  plugins: [new HtmlWebpackPlugin({ template: './www/index.html' })]
+  plugins: [
+    new CopyPlugin({
+      patterns: [{ from: 'src/assets/images', to: 'src/assets/images' }]
+    }),
+    new HtmlWebpackPlugin({ template: './www/index.html' })
+  ]
 }
