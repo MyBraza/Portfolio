@@ -30,6 +30,10 @@
     cursor: default;
   }
 
+  .dragon-neck-canvas{
+    background-image: url("src/assets/images/banner.jpg");
+  }
+
   .outlined-svg > path {
     fill: none;
     stroke-width: 1.2rem;

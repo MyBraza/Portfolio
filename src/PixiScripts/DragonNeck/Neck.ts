@@ -26,8 +26,9 @@ for (let i = 0; i < 12; i++) {
   Neck[i].mass = 15
   Neck[i].friction = 1
   Neck[i].bounciness = 0.5
+  Neck[i].isFalling = true
   Neck[i].step = () => {
-    return () => {
+    return (delta) => {
       const goal = {
         x: Neck[i].parentObject.x,
         y:
@@ -36,6 +37,7 @@ for (let i = 0; i < 12; i++) {
       }
       if (i === 0) goal.y += Neck[i].height
       positionBone(Neck[i], goal)
+      if (Neck[i].isFalling) Neck[i].falling(delta)
       Neck[i].velocity.applyTo(Neck[i])
       Neck[i].angle = getAngle(Neck[i], { x: goal.x, y: goal.y + 40 }) + 90
     }
@@ -51,8 +53,9 @@ Head.collisionRadius = Head.height
 Head.mass = 15
 Head.friction = 1
 Head.bounciness = 0.5
+Head.isFalling = true
 Head.step = () => {
-  return () => {
+  return (delta) => {
     const goal = {
       x: Head.parentObject.x,
       y:
@@ -60,6 +63,7 @@ Head.step = () => {
         Head.parentObject.height * Head.parentObject.anchor.y
     }
     positionBone(Head, goal)
+    if (Head.isFalling) Head.falling(delta)
     Head.velocity.applyTo(Head)
     Head.angle = getAngle(Head, { x: goal.x, y: goal.y + 40 }) - 90
   }
