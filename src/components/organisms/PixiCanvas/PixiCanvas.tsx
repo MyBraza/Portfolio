@@ -5,6 +5,7 @@ type TPixiCanvasProps = {
   width?: number
   height?: number
   backgroundColor?: number
+  transparent?: boolean
   className: string
   script: (App: PIXI.Application) => void
 }
@@ -12,7 +13,8 @@ type TPixiCanvasProps = {
 const PixiCanvas: FC<TPixiCanvasProps> = ({
   width = 800,
   height = 600,
-  backgroundColor = 0xffffff,
+  transparent,
+  backgroundColor,
   className,
   script
 }: TPixiCanvasProps) => {
@@ -22,6 +24,7 @@ const PixiCanvas: FC<TPixiCanvasProps> = ({
     const App = new PIXI.Application({
       width,
       height,
+      transparent,
       backgroundColor,
       view: ref?.current ?? undefined
     })
